@@ -21,10 +21,9 @@ function sumToN(n) {
   if (n<0) return null
   if (n>0) {
     sumToN(n +(n-1))
-
   }
-
 }
+
 sumToN(5) // returns 15
 
 
