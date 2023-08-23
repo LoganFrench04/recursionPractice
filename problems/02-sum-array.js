@@ -9,11 +9,18 @@ sumArray([1, 2, 3]); //  6
 sumArray([0, 1, -3]); //  -2
 sumArray([1, 2, 3, 4, 5]); // 15
 ***********************************************************************/
-
+//base case - arr.length === 0
+//rec step - arr[i] + arr[i + 1]
+//rec case - < 0
 function sumArray(arr) {
-  // Your code here 
+  return arr.reduce((n, cVal) => {
+    let sum = n + cVal
+    return sum
+  })
 }
-  
+
+console.log(sumArray([1, 2, 3])); //  6
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = sumArray;
