@@ -18,12 +18,15 @@ rec case: n>0
 */
 
 function sumToN(n) {
-  if (n<0) return null
+
+  if (n<0) return null//edge case
+  if (n===0) return 0//base case
   if (n>0) {
-    sumToN(n +(n-1))
+    let sum=n + sumToN(n-1)//rec step
+
+    return sum
   }
 }
-
 sumToN(5) // returns 15
 
 
