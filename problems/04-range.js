@@ -12,9 +12,14 @@ range(7, 6); // []
 
 
 function range(start, end) {
-  // Your code here 
+  if (end-start<=0) return [] //edge case
+  if (end>start) {
+    const newStart = range(start+1, end)
+    newStart.unshift(start)
+    return newStart
+  }
 }
-
+console.log(range(1, 5));
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

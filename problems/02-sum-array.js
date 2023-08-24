@@ -12,11 +12,13 @@ sumArray([1, 2, 3, 4, 5]); // 15
 //base case - arr.length === 0
 //rec step - arr[i] + arr[i + 1]
 //rec case - < 0
-function sumArray(arr) {
-  return arr.reduce((n, cVal) => {
-    let sum = n + cVal
-    return sum
-  })
+function sumArray(arr, i=0) {
+ if (arr.length===0) return []
+ if (arr.length>0) {
+    return arr[i] +sumArray(arr[i-1],i++)
+  }
+
+
 }
 
 console.log(sumArray([1, 2, 3])); //  6

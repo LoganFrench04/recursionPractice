@@ -11,10 +11,13 @@ iceCreamShop(['cookies n cream', 'blue moon', 'superman', 'honey lavender', 'sea
 iceCreamShop(['moose tracks'], 'moose tracks'); // true
 iceCreamShop([], 'honey lavender'); // false
 ***********************************************************************/
-
+// base case: false
+//rec case: true
+//rec step: favorite icecream
 
 function iceCreamShop(flavors, favorite) {
-  // Your code here 
+    if(!flavors.includes(favorite))
+  return
 }
 
 
